@@ -7,7 +7,7 @@ function App (){
 
   const [notes,setNotes] = useState([])
 
-  //adicionar uma nova nota
+  //adicionar uma nova nota .
 
   const addNote = (note) => {
 

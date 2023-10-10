@@ -2,7 +2,7 @@ import react, {useState,useEffect,useRef} from "react";
 
 import { Text, View, StyleSheet, TouchableOpacity, TextInput} from 'react-native';
 
-   const Relogio = () => {
+   const Relogio = () => {g
 
       const [time,setTime] = useState(new Date().toLocaleTimeString([],{ hour12: false}));
       const [date,setDate] = useState(new Date().toLocaleDateString());

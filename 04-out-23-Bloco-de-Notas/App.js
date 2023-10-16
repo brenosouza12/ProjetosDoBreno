@@ -47,16 +47,16 @@ export default function App() {
 
   return (
 
-    <View style={styles.container}>
+    <View style = {styles.container}>
 
-      <Text style={styles.titulo}>Bloco de Notas</Text>
+      <Text style = {styles.titulo}>Bloco de Notas</Text>
 
       <TextInput
 
-        style={styles.input}
-        placeholder='Digite a sua nota...'
-        value={nota}
-        onChangeText={(texto) => setNota(texto)}
+        style = {styles.input}
+        placeholder = 'Digite a sua nota...'
+        value = {nota}
+        onChangeText = {(texto) => setNota(texto)}
 
       />
 

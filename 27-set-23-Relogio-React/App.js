@@ -117,7 +117,7 @@ import { Text, View, StyleSheet, TouchableOpacity, TextInput} from 'react-native
 
          <TouchableOpacity style = {styles.botao} onPress = {startTemporizador}>
 
-           <Text style = {styles.botaoTexto}>Iniciar Temporizador</Text>
+           <Text style = {styles.botaoTexto}>Iniciar Temporizador :/</Text>
 
          </TouchableOpacity>
 

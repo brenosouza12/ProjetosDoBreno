@@ -7,7 +7,7 @@ function App (){
 
   const [notes,setNotes] = useState([])
 
-  //adicionar uma nova nota .
+  //Adicionar uma nova nota .
 
   const addNote = (note) => {
 
@@ -15,7 +15,7 @@ function App (){
 
   };
 
-  //excluir uma nota
+  //Excluir uma nota
 
   const deleteNote = (index) => {
 
@@ -29,7 +29,7 @@ function App (){
 
     <div className = "App">
 
-      <h1>Meu caderno de anotações</h1>
+      <h1>Meu caderno de anotações - by Breno Souza</h1>
       <NoteForm addNote = {addNote}/>
       <NoteList notes = {notes} deleteNote = {deleteNote}/>
 

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+gitimport React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, FlatList, Modal, StyleSheet } from 'react-native';
+import { initDatabase, addBus, getAllBuses } from './Database';
 
 export default function App() {
   const [buses, setBuses] = useState([]);
@@ -15,18 +16,31 @@ export default function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [selectedBus, setSelectedBus] = useState(null);
 
-  const addBus = () => {
-    if (editingBus !== null) {
-      const updatedBuses = buses.map((bus, index) =>
-        index === editingBus ? busInfo : bus
-      );
-      setBuses(updatedBuses);
-      setEditingBus(null);
-    } else {
-      setBuses([...buses, busInfo]);
-    }
+  const [storedBuses, setStoredBuses] = useState([]);
+
+  useEffect(() => {
+    initDatabase();
+    loadBuses();
+    loadStoredBuses();
+  }, []);
+
+  const saveBus = () => {
+    addBus(busInfo);
+    loadBuses();
     setBusInfo({ empresa: '', prefixo: '', chassi: '', ano: '', placa: '', modelo: '' });
   };
+
+  const loadBuses = () => {
+    getAllBuses((buses) => {
+      setBuses(buses);
+    });
+  }
+
+  const loadStoredBuses = () => {
+    getAllBuses((buses) => {
+      setStoredBuses(buses);
+    });
+  }
 
   const editBus = (index) => {
     const busToEdit = buses[index];
@@ -63,7 +77,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Onibus Aspectverso</Text>
+      <Text style={styles.header}>Ônibus Aspectverso</Text>
+
       <TextInput
         style={styles.input}
         placeholder="Empresa"
@@ -100,7 +115,7 @@ export default function App() {
         value={busInfo.placa}
         onChangeText={(text) => setBusInfo({ ...busInfo, placa: text })}
       />
-      <Button title={editingBus !== null ? 'Editar Ônibus' : 'Adicionar Ônibus'} onPress={addBus} />
+      <Button title={editingBus !== null ? 'Editar Ônibus' : 'Adicionar Ônibus'} onPress={saveBus} />
       <TextInput
         style={styles.input}
         placeholder="Pesquisar Ônibus"

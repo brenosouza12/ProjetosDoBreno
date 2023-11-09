@@ -1,0 +1,79 @@
+{
+
+    "questions":[
+
+        {
+
+            "question": "Qual o nome da irmã mais nova de Breno Souza ?",
+            "options": ["Julia Mazzioni", "Julia Oliveira", "Kelli Quadros"],
+            "correctAnswer": "Julia Mazzioni"
+
+        },
+
+        {
+
+            "question": "Qual a cor preferida de Breno Souza ?",
+            "options": ["Amarelo","Vermelho","Roxo"],
+            "correctAnswer": "Vermelho"
+
+        },
+
+        {
+
+            "question": "Qual o nome dos gatos de Breno Souza ?",
+            "options": ["Emma e Peludo","Amellie e Luna","Rocket e Asper"],
+            "correctAnswer": "Emma e Peludo"
+
+        },
+
+        {
+
+            "question": "Qual a serie preferida de Breno Souza ?",
+            "options": ["The Flash","Little Einsteins","Euphoria"],
+            "correctAnswer": "Little Einsteins"
+            
+        },
+
+        {
+
+            "question": "Qual a coisa preferida de Breno?",
+            "options": ["Tomar banho","Jogar The Sims 4","Brincar com os seus gatos"],
+            "correctAnswer": "Jogar The Sims 4"
+            
+        },
+
+        {
+
+            "question": "Qual seria o termo certo para um grupo de 12 amigas?",
+            "options": ["Twelve 2xxx","Twisted 2xxx","Smoothie 2xxx"],
+            "correctAnswer": "Twelve 2xxx"
+            
+        },
+
+        {
+
+            "question": "Qual seria o termo certo para um grupo de 18 amigas?",
+            "options": ["Twelve 2xxx","Twisted 2xxx","Smoothie 2xxx"],
+            "correctAnswer": "Twisted 2xxx"
+            
+        },
+
+        {
+
+            "question": "Qual seria o termo certo para um grupo em que as integrantes são adicionadas com o tempo?",
+            "options": ["Twelve 2xxx","Twisted 2xxx","Smoothie 2xxx"],
+            "correctAnswer": "Smoothie 2xxx"
+            
+        },
+
+        {
+
+            "question": "Qual o sobrenome de Breno?",
+            "options": ["Souza", "Lovelylett", "Wood", "Sunny", "Wayland"],
+            "correctAnswer": "Souza"
+
+        }
+
+
+    ]
+}
